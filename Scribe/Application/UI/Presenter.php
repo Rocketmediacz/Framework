@@ -31,6 +31,8 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 	 * Check requirements
 	 *
 	 * @param $element
+	 *
+	 * @throws \Nette\Application\ForbiddenRequestException
 	 */
 	public function checkRequirements($element)
 	{
@@ -43,14 +45,14 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 
 			// check if user is in role
 			if ($element->hasAnnotation("Role")) {
-				if (!$user->isInRole($element->getAnnotation('Role'))) {
+				if (!$this->user->isInRole($element->getAnnotation('Role'))) {
 					throw new Nette\Application\ForbiddenRequestException;
 				}
 			}
 
 			// check if user is allowed to do something...
 			if ($element->hasAnnotation("Resource")) {
-				if (!$user->isAllowed($element->getAnnotation("Resource"), $element->getAnnotation("Privilege"))) {
+				if (!$this->user->isAllowed($element->getAnnotation("Resource"), $element->getAnnotation("Privilege"))) {
 					throw new Nette\Application\ForbiddenRequestException;
 				}
 			}
