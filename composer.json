@@ -4,12 +4,12 @@
     "description": "Rocketmedia's framework based on Nette",
     "keywords": ["framework", "nette", "rocketmedia"],
     "homepage": "https://github.com/Rocketmediacz/Framework",
-    "license": "Copyright 2014 David Zadražil",
+    "license": "Copyright 2014 David Zadrazil",
     "minimum-stability": "dev",
 
     "authors": [
         {
-            "name": "David Zadražil",
+            "name": "David Zadrazil",
             "homepage": "http://davidzadrazil.cz"
         }
     ],
