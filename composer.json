@@ -1,5 +1,5 @@
 {
-    "name": "rocketmedia/framework",
+    "name": "rocketmedia-cz/framework",
     "type": "library",
     "description": "Rocketmedia's framework based on Nette",
     "keywords": ["framework", "nette", "rocketmedia"],
