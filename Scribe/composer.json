@@ -1,0 +1,30 @@
+{
+    "name": "rocketmedia/framework",
+    "type": "library",
+    "description": "Rocketmedia's framework based on Nette",
+    "keywords": ["framework", "nette", "rocketmedia"],
+    "homepage": "https://github.com/Rocketmediacz/Framework",
+    "license": "Copyright 2014 David Zadražil",
+    "minimum-stability": "dev",
+
+    "authors": [
+        {
+            "name": "David Zadražil",
+            "homepage": "http://davidzadrazil.cz"
+        }
+    ],
+
+    "support": {
+        "email": "david@rocketmedia.cz",
+        "issues": "https://github.com/Rocketmediacz/Framework/issues"
+    },
+
+    "require": {
+        "php": ">=5.4.0",
+        "nette/nette": "~2.1.0"
+    },
+
+    "require-dev": {
+        "nette/tester": "~1.0.0"
+    }
+}
