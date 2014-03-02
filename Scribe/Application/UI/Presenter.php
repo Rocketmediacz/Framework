@@ -10,6 +10,7 @@ namespace Scribe\Application\UI;
 
 use Nette,
 	Nette\Application\ForbiddenRequestException;
+use Scribe\Templating\Helpers;
 
 /**
  * Class Presenter
@@ -20,8 +21,26 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 {
 
 
+
 	/**
-	 * Check requirements
+	 * @param null $class
+	 *
+	 * @return Nette\Templating\ITemplate
+	 */
+	public function createTemplate($class = NULL)
+	{
+		$template = parent::createTemplate($class);
+
+		// register helpers
+		$template->registerHelperLoader(array(new Helpers(), 'helperLoader'));
+
+		return $template;
+	}
+
+
+
+	/**
+	 * Check presenter requirements
 	 *
 	 * @param $element
 	 *
