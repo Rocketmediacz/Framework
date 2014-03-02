@@ -33,7 +33,7 @@ abstract class Presenter extends Nette\Application\UI\Presenter
 
 			// check user login
 			if (!$this->user->isLoggedIn()) {
-				$this->redirect("Uzivatel:prihlaseni", array("backlink" => $this->storeRequest()));
+				$this->redirect("Uzivatel:prihlaseni", array("backlink" => $this->storeRequest())); //TODO: Umoznit v konfiguraci zmenit odkaz presmerovani
 			}
 
 			// check if user is in role
